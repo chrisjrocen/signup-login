@@ -1,28 +1,47 @@
 <?php
-session_start()
+session_start();
 ?>
-<header>
-<nav class="nav-header-main">
-    
-    </nav>
+<!DOCTYPE html>
+<html>
 
-    <form class="myform" action="includes/login.inc.php" action="post">
-        <input type="email" name="email" placeholder="E-mail">
-        <input type="password" name="pwd">
-        <button type="submit" name="login-submit">Login</button>
-    </form>
-        <a href="signup.php">Sign up</a>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="description example" />
+    <meta name="viewport" content="width=content-width, initial scale=1" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+</head>
 
+<body>
+    <header>
+        <nav class="nav-header-main">
 
-    <form action="includes/logout.inc.php" method="post">
-        <button type="submit" name="logout-submit">Log out</button>
-    </form>
+                <!-- Simple nav-->
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
 
-    <?php
-        if (isset($_SESSION['userId'])) {
-            echo "<p>You are logged in</p>";
-        } else
-            echo "<p>You are logged out</p>"
-        ?>
+                <!--Login form-->
+                <form class="myform" action="includes/login.inc.php" action="post">
+                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="password" name="pwd">
+                    <input type="button" name="login-submit" value="Login">
+                </form>
 
-</header>
+                <!--signup form-->
+                <form class="myform" action="includes/signup.inc.php" method="post">
+                    <input type="text" name="firstname" placeholder="First name">
+                    <input type="text" name="surname" placeholder="Other name">
+                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="password" name="pwd" placeholder="**********">
+                    <input type="button" name="signup-submit" value="Sign up">
+                </form>
+
+                <!--Logout button-->
+                <form class="myform" action="includes/logout.inc.php" method="post">
+                    <input type="button" name="logout-submit" value="Log out">
+                </form>
+
+        </nav>
+    </header>

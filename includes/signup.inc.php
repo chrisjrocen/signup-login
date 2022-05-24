@@ -17,7 +17,7 @@ if (isset($_POST['signup-submit'])){
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)){
-        header("Location: ../signup.php?error=sqlerror");
+        header("Location: ../index.php?error=sqlerror");
         exit();
     }
 
@@ -27,7 +27,7 @@ if (isset($_POST['signup-submit'])){
 
         mysqli_stmt_bind_param($stmt, "ssss", $firstname, $othername, $email, $hashedpwd);
         mysqli_stmt_execute($stmt);
-        header("Location: ../signup.php?signup=success");
+        header("Location: ../index.php?signup=success");
     }
 
     mysqli_stmt_close($stmt);
@@ -37,6 +37,6 @@ if (isset($_POST['signup-submit'])){
 }
 
 else {
-    header("Location: ../signup.php");
+    header("Location: ../index.php");
     exit();
 }

@@ -1,0 +1,86 @@
+body {
+  background-color: aqua;
+}
+
+.nav-header-main {
+  list-style-type: none;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-shadow: #000 0 0 0.2em;
+}
+.nav-header-main ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.nav-header-main ul li {
+  display: block;
+  float: left;
+}
+.nav-header-main ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav-header-main ul li a:hover {
+  background-color: #111;
+}
+.nav-header-main .myform {
+  float: right;
+}
+.nav-header-main .myform input[type=text], .nav-header-main .myform select {
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.nav-header-main .myform input[type=email], .nav-header-main .myform select {
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.nav-header-main .myform input[type=password], .nav-header-main .myform select {
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.nav-header-main .myform input[type=button] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.nav-header-main .myform input[type=button]:hover {
+  background-color: #45a049;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
+  float: right;
+}
+
+.wrapper-main {
+  font: bold 2.5vw "Arial", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

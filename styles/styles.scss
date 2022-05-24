@@ -1,0 +1,92 @@
+$padding_form_elements: 6px 10px;
+$margins_form_elements: 8px 0;
+
+@mixin login_signup_form_inputs {
+    padding: $padding_form_elements;
+    margin: $margins_form_elements;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: aqua;
+}
+
+.nav-header-main {
+    list-style-type: none;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-shadow: #000 0 0 .2em;
+
+    //nesting
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+
+        //nesting
+        li {
+            display: block;
+            float: left;
+
+            a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            a:hover {
+                background-color: #111;
+            }
+        }
+    }
+
+    .myform {
+        float: right;
+
+        input[type=text], select {
+            @include login_signup_form_inputs;
+        }
+        
+        input[type=email], select {
+            @include login_signup_form_inputs;
+        }
+
+        input[type=password], select {
+            @include login_signup_form_inputs;
+        }
+
+        input[type=button] {
+            background-color: #4CAF50;
+            color: white;
+            padding: $padding_form_elements;
+            margin: $margins_form_elements;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+          
+        input[type=button]:hover {
+            background-color: #45a049;
+        }
+    }
+}
+
+.nav-left {
+    float: left;
+}
+.nav-right {
+    float: right;
+}
+
+.wrapper-main {
+    font: bold calc(.025 * (100vw)) 'Arial', sans-serif;
+}
