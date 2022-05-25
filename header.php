@@ -6,12 +6,13 @@ session_start()
     
     </nav>
 
-    <form class="myform" action="includes/login.inc.php" action="post">
-        <input type="email" name="email" placeholder="E-mail">
-        <input type="password" name="pwd">
-        <button type="submit" name="login-submit">Login</button>
-    </form>
-        <a href="signup.php">Sign up</a>
+    <ul>
+        <li> <a href="signup.php">Sign up</a></li>
+        <li> <a href="login.php">Log in</a></li>
+
+    </ul>
+    
+       
 
 
     <form action="includes/logout.inc.php" method="post">

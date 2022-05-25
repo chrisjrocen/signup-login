@@ -18,7 +18,6 @@ require "header.php";
         <input type="password" name="pwd" placeholder = "**********">
         <button type="submit" name="signup-submit">Sign up</button>
     </form>
-        <a href="login.php">Login</a>
 
         
     </body>
