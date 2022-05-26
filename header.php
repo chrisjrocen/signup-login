@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 ?>
 <header>
 <nav class="nav-header-main">
@@ -11,19 +11,16 @@ session_start()
         <li> <a href="login.php">Log in</a></li>
 
     </ul>
-    
-       
-
 
     <form action="includes/logout.inc.php" method="post">
         <button type="submit" name="logout-submit">Log out</button>
     </form>
 
     <?php
-        if (isset($_SESSION['userId'])) {
-            echo "<p>You are logged in</p>";
+        if (isset($_SESSION['id'])) {
+            echo "<p>You are logged in as </p>";
         } else
-            echo "<p>You are logged out</p>"
+            echo "<p>You are logged out</p>";
         ?>
 
 </header>

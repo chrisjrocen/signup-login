@@ -12,7 +12,7 @@ require "header.php";
     <body>
 
         <form class="myform" action="includes/login.inc.php" action="post">
-                <input type="email" name="email" placeholder="E-mail">
+                <input type="text" name="mailuid" placeholder="E-mail">
                 <input type="password" name="pwd">
                 <button type="submit" name="login-submit">Login</button>
         </form>

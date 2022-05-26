@@ -6,14 +6,35 @@ include_once 'includes/db.php';
 //if we need access to the databse, we just need to refer to $conn.
 
 ?>
-
 <main>
     <section class="section-default">
         <?php
-        if (isset($_SESSION['userId'])) {
-            echo "<p>You are logged in</p>";
-        } else
-            echo "<p>You are logged out</p>"
+
+        $sql = "SELECT * FROM users;";
+        $result = mysqli_query($conn, $sql);
+        $logged = array();
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $logged[] = $row;
+            }
+        }
+
+        //print_r($logged);
+
+        echo "<h2>The people logged in are:</h2>";
+
         ?>
+        <ul>
+
+            <?php
+            
+            //displaying a multidimensional array.
+            foreach ($logged as $key => $person) {
+                echo "<li>" . $person['first_name'] . "</li>";
+            }
+            ?>
+
+        </ul>
     </section>
 </main>
