@@ -1,8 +1,14 @@
 <?php
+/**
+ * Doc comment
+ * 
+ * @Package category
+ * 
+ */
 
 require "header.php";
 
-include_once 'includes/db.php';
+require_once 'includes/db.php';
 //if we need access to the databse, we just need to refer to $conn.
 
 ?>

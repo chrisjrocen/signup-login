@@ -1,8 +1,17 @@
 <?php
-//check if the user got here by clicking on the login button
-if (isset($_POST['login-submit'])) {
 
-    require 'dbhandler.inc.php';
+/**
+ * Login handler
+ * 
+ * @Package category
+ * 
+ */
+
+require 'dbhandler.inc.php';
+
+//check if the user got here by clicking on the login button
+
+if (isset($_POST['login-submit'])) {
 
     $mailuid = $_POST['mailuid'];
     $password = $_POST['pwd'];
