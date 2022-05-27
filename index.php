@@ -43,4 +43,10 @@ require_once 'includes/db.php';
 
         </ul>
     </section>
+    <section>
+        <form action="uploads.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button type="submit" name="upload-submit">Upload file</button>
+        </form>
+    </section>
 </main>
