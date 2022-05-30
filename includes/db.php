@@ -1,8 +1,9 @@
 <?php
+
 /**
  * Database connection
- * 
- * @Package category
+ *
+ * @package category
  */
 
 $dbServername = "localhost";
